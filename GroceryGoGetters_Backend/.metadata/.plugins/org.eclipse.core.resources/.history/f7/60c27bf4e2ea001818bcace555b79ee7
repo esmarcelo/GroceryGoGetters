@@ -1,0 +1,5 @@
+package com.grocerygogetters.util;
+
+public class HibernateUtil {
+
+}

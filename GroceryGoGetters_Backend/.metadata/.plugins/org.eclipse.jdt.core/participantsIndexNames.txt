@@ -1,0 +1,3 @@
+INDEX VERSION 1.131
+D:\Documents\Java Workspace\Grocery Go Getters\GroceryGoGetters_Backend\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1558925845.index
+\GroceryGoGetters\src\main\resources
