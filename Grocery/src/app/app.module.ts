@@ -16,6 +16,7 @@ import { ScheduleComponent } from './schedule/schedule.component';
 import { FeedbackComponent } from './feedback/feedback.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { ProfileComponent } from './profile/profile.component';
+import { MarketplaceComponent } from './marketplace/marketplace.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -29,7 +30,8 @@ const routes: Routes = [
   { path: 'schedule', component: ScheduleComponent},
   { path: 'feedback', component: FeedbackComponent},
   { path: 'shoppingcart', component: ShoppingCartComponent},
-  { path: 'profile', component: ProfileComponent}
+  { path: 'profile', component: ProfileComponent},
+  { path: 'marketplace', component: MarketplaceComponent}
 ];
 
 @NgModule({
@@ -46,7 +48,8 @@ const routes: Routes = [
     ScheduleComponent,
     FeedbackComponent,
     ShoppingCartComponent,
-    ProfileComponent
+    ProfileComponent,
+    MarketplaceComponent
   ],
   imports: [
     BrowserModule,
