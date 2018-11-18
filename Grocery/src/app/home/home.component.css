@@ -1,0 +1,4 @@
+.carousel.slide {
+  max-width: 1040px;
+  margin: 0px auto; /*to align in center*/
+}
