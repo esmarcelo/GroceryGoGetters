@@ -17,6 +17,12 @@ import { FeedbackComponent } from './feedback/feedback.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { ProfileComponent } from './profile/profile.component';
 import { MarketplaceComponent } from './marketplace/marketplace.component';
+import { SchedulerModule } from '@progress/kendo-angular-scheduler';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MapComponent } from './map/map.component';
+import { NguiMapModule } from '@ngui/map';
+import { DirectionsComponent } from './directions/directions.component';
+
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -31,7 +37,8 @@ const routes: Routes = [
   { path: 'feedback', component: FeedbackComponent},
   { path: 'shoppingcart', component: ShoppingCartComponent},
   { path: 'profile', component: ProfileComponent},
-  { path: 'marketplace', component: MarketplaceComponent}
+  { path: 'marketplace', component: MarketplaceComponent},
+  { path: 'map', component: MapComponent}
 ];
 
 @NgModule({
@@ -49,12 +56,17 @@ const routes: Routes = [
     FeedbackComponent,
     ShoppingCartComponent,
     ProfileComponent,
-    MarketplaceComponent
+    MarketplaceComponent,
+    MapComponent,
+    DirectionsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    SchedulerModule,
+    BrowserAnimationsModule,
+    NguiMapModule.forRoot({apiUrl: 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCVTCJ3toKKGUibIAcZoKhEQYq-OOf_Qnw'})
   ],
   providers: [],
   bootstrap: [AppComponent]
