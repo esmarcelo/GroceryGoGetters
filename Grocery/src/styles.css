@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 .btn {
+<<<<<<< HEAD
   background-color:  #945D60;
 }
 
@@ -34,3 +35,12 @@ html {
   position: relative;
   min-height: 100%;
 }
+=======
+    background-color:  #945D60;
+}
+
+button {
+    color: ghostwhite
+}
+
+>>>>>>> c0b92e8c24cd63350b4677923c31050299ed7633

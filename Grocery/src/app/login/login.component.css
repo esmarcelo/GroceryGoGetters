@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .login-btn {
     color: ghostwhite;
     background-color: rgb(115, 131, 112);
@@ -43,3 +44,8 @@ input {
 .form-control {
     padding: 10px;
 }
+=======
+.btn {
+    color: ghostwhite
+}
+>>>>>>> c0b92e8c24cd63350b4677923c31050299ed7633
