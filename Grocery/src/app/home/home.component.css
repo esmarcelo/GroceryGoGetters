@@ -1,4 +1,11 @@
-.carousel.slide {
-  max-width: 1040px;
-  margin: 0px auto; /*to align in center*/
+.carousel-item {
+  max-height: 500px; /* before value - 800px */
+  height: 100%;
+  width: 100%;
+  /* position: absolute;  
+  top: 0;  
+  bottom: 0;  
+  left: 0;  
+  right: 0;  
+  margin: auto; */
 }
