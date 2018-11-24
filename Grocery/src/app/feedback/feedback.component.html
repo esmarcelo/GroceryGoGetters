@@ -1,0 +1,10 @@
+<br>
+<br>
+<div class="input-group">
+  <div class="input-group-prepend">
+    <span class="input-group-text">Any Feedback?</span>
+  </div>
+  <textarea class="form-control" aria-label="With textarea" name="feed" #feed></textarea>
+</div>
+<br>
+<button class="btn" [routerLink]="['/customers']" (click)="submitFeedback(feed.value)">Submit</button>

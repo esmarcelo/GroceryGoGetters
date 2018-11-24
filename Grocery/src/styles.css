@@ -1,1 +1,36 @@
 /* You can add global styles to this file, and also import other style files */
+.btn {
+  background-color:  #945D60;
+}
+
+button {
+  color: ghostwhite;
+}
+button:hover {
+    color: rgb(215, 255, 122);
+}
+
+/* Main body styling */
+footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 250px;
+  background-color: #305c2e;
+  color: ghostwhite;
+  position: absolute;
+}
+
+.footerwidth {
+  margin: 0px auto; /*to align in center*/
+}
+
+body {
+  margin: 0 0 100px;
+  padding-bottom: 250px;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
