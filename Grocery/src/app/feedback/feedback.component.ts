@@ -9,6 +9,11 @@ export class FeedbackComponent implements OnInit {
 
   constructor() { }
 
+
+  submitFeedback(fb) {
+    console.log(fb);
+  }
+
   ngOnInit() {
   }
 
