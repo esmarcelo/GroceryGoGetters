@@ -17,6 +17,7 @@ import { FeedbackComponent } from './feedback/feedback.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { ProfileComponent } from './profile/profile.component';
 import { MarketplaceComponent } from './marketplace/marketplace.component';
+import { DriverOrdersListComponent } from './driver-orders-list/driver-orders-list.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -31,7 +32,8 @@ const routes: Routes = [
   { path: 'feedback', component: FeedbackComponent},
   { path: 'shoppingcart', component: ShoppingCartComponent},
   { path: 'profile', component: ProfileComponent},
-  { path: 'marketplace', component: MarketplaceComponent}
+  { path: 'marketplace', component: MarketplaceComponent},
+  { path: 'completedDriverOrders', component: DriverOrdersListComponent}
 ];
 
 @NgModule({
@@ -49,7 +51,8 @@ const routes: Routes = [
     FeedbackComponent,
     ShoppingCartComponent,
     ProfileComponent,
-    MarketplaceComponent
+    MarketplaceComponent,
+    DriverOrdersListComponent
   ],
   imports: [
     BrowserModule,
