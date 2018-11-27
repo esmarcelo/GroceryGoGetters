@@ -21,12 +21,16 @@
 li {
   float: none;
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: top;
 }
 
 .nav-link {
   color: ghostwhite;
   padding-top: 4px;
+}
+
+a {
+  display: block;
 }
 
 a:hover {
