@@ -1,0 +1,51 @@
+<<<<<<< HEAD
+.login-btn {
+    color: ghostwhite;
+    background-color: rgb(115, 131, 112);
+    margin: 0 auto;
+    float: right;
+    /* height: 40px; */
+    width: 195px;
+}
+.login-btn:hover {
+    color: rgb(215, 255, 122);
+    background-color: #626E60;
+}
+
+.signup-btn {
+    color: #626E60;
+    background-color: ghostwhite;
+    border-color: #626E60;
+    margin: 0 auto;
+    float: left;
+    /* height: 40px; */
+    width: 195px;
+}
+.signup-btn:hover {
+    color: rgb(215, 255, 122);
+    background-color: #626E60;
+}
+
+form {
+    width: 400px;
+}
+
+i {
+    padding: 10px;
+    color: ghostwhite;
+    background: #626E60;
+    min-width: 40px;
+    text-align: center;
+}
+
+input {
+}
+
+.form-control {
+    padding: 10px;
+}
+=======
+.btn {
+    color: ghostwhite
+}
+>>>>>>> c0b92e8c24cd63350b4677923c31050299ed7633
