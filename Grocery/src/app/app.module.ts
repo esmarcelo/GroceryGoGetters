@@ -17,6 +17,7 @@ import { FeedbackComponent } from './feedback/feedback.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { ProfileComponent } from './profile/profile.component';
 import { MarketplaceComponent } from './marketplace/marketplace.component';
+import { DriverOrdersListComponent } from './driver-orders-list/driver-orders-list.component';
 import { SchedulerModule } from '@progress/kendo-angular-scheduler';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MapComponent } from './map/map.component';
@@ -38,6 +39,7 @@ const routes: Routes = [
   { path: 'shoppingcart', component: ShoppingCartComponent},
   { path: 'profile', component: ProfileComponent},
   { path: 'marketplace', component: MarketplaceComponent},
+  { path: 'completedDriverOrders', component: DriverOrdersListComponent},
   { path: 'map', component: MapComponent}
 ];
 
@@ -57,6 +59,7 @@ const routes: Routes = [
     ShoppingCartComponent,
     ProfileComponent,
     MarketplaceComponent,
+    DriverOrdersListComponent,
     MapComponent,
     DirectionsComponent
   ],
