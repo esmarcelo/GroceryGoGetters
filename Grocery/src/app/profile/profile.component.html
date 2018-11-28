@@ -1,43 +1,46 @@
 <br>
 <br>
-<h2>Edit</h2>
-<br>
-<form>
-  <div class="form-row">
-    <div class="form-group col-md-6">
-      <label for="inputFirstname">First Name</label>
-      <input type="text" class="form-control" id="inputFirstname" placeholder="First" name="firstname" #newFirstname>
-    </div>
-    <div class="form-group col-md-6">
-        <label for="inputLastname">Last Name</label>
-        <input type="text" class="form-control" id="inputLastname" placeholder="Last" name="firstname" #newLastname>
+<div class="container">
+    <h2>Edit</h2>
+    <br>
+    <form>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="inputFirstname">First Name</label>
+          <input type="text" class="form-control" id="inputFirstname" placeholder="First" name="firstname" #newFirstname>
+        </div>
+        <div class="form-group col-md-6">
+            <label for="inputLastname">Last Name</label>
+            <input type="text" class="form-control" id="inputLastname" placeholder="Last" name="lastname" #newLastname>
+          </div>
       </div>
-  </div>
-    <div class="form-group">
-      <label for="inputAddress">Address</label>
-      <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" name="address" #newAddress>
-    </div>
-    <div class="form-group">
-      <label for="inputAddress2">Address 2</label>
-      <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor" name="address2" #newAddress2>
-    </div>
-    <div class="form-row">
-      <div class="form-group col-md-4">
-        <label for="inputCity">City</label>
-        <input type="text" class="form-control" id="inputCity" name="city" #newCity>
-      </div>
-      <div class="form-group col-md-4">
-        <label for="inputState">State</label>
-       <input type="text" class="form-control" id="inputState" placeholder="State" name="state" #newState>
-      </div>
-      <div class="form-group col-md-2">
-        <label for="inputPhone">Phone</label>
-        <input type="text" class="form-control" id="inputPhone" name="phone" #newPhone>
-      </div>
-      <div class="form-group col-md-2">
-        <label for="inputZip">Zip</label>
-        <input type="text" class="form-control" id="inputZip" name="zip" #newZip>
-      </div>
-    </div>
-  </form>
-  <button class="btn" [routerLink]="['/customers']" (click)="editProfile(newFirstname.value, newLastname.value, newAddress.value, newAddress2.value, newCity.value, newState.value, newPhone.value, newZip.value)">Submit</button>
+        <div class="form-group">
+          <label for="inputAddress">Address</label>
+          <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" name="address" #newAddress>
+        </div>
+        <div class="form-group">
+          <label for="inputAddress2">Address 2</label>
+          <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor" name="address2" #newAddress2>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-4">
+            <label for="inputCity">City</label>
+            <input type="text" class="form-control" id="inputCity" placeholder="City" name="city" #newCity>
+          </div>
+          <div class="form-group col-md-4">
+            <label for="inputState">State</label>
+           <input type="text" class="form-control" id="inputState" placeholder="State" name="state" #newState>
+          </div>
+          <div class="form-group col-md-2">
+            <label for="inputPhone">Phone</label>
+            <input type="text" class="form-control" id="inputPhone" placeholder="(000) 000-0000" name="phone" #newPhone>
+          </div>
+          <div class="form-group col-md-2">
+            <label for="inputZip">Zip</label>
+            <input type="text" class="form-control" id="inputZip" placeholder="99999" name="zip" #newZip>
+          </div>
+        </div>
+      </form>
+      <button class="btn" [routerLink]="['/customers']" (click)="editProfile(newFirstname.value, newLastname.value, newAddress.value, newAddress2.value, newCity.value, newState.value, newPhone.value, newZip.value)">Submit</button>
+
+</div>
