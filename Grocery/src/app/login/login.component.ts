@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../auth.service';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-login',
@@ -8,8 +9,9 @@ import { AuthService } from '../auth.service';
 })
 export class LoginComponent implements OnInit {
   message: string;
+  users;
 
-  constructor(public authService: AuthService) {
+  constructor(public authService: AuthService, private http: HttpClient) {
     this.message = '';
    }
 
@@ -20,10 +22,16 @@ export class LoginComponent implements OnInit {
       setTimeout(function() {
         this.message = '';
       }.bind(this), 500);
-      this.authService.login(username, password);
+      for (let i = 0; i < this.users.length; i++) {
+        console.log(this.users[0].user_username);
+        if (username === this.users[i].user_username && password === this.users[i].user_password) {
+            this.authService.login(username, password);
+        }
+      }
     }
     return false;
   }
+
 
   logout(): boolean {
     this.authService.logout();
@@ -31,6 +39,15 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit() {
+      this.http.get('http://ec2-3-16-151-233.us-east-2.compute.amazonaws.com:8080/GroceryGoGetters/users').subscribe(data => {
+      console.log(data);
+      this.users = data;
+      console.log(this.users);
+      console.log(this.users[0]);
+      for (let i = 0; i < this.users.length; i++) {
+          console.log(this.users[i].user_username);
+      }
+  });
   }
 
 }

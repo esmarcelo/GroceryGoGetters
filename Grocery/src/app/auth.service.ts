@@ -1,16 +1,16 @@
 import { Injectable } from '@angular/core';
 import { OnInit } from '@angular/core';
-import { LoginComponent } from './login/login.component';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService  implements OnInit {
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   login(user: string, password: string): boolean {
-    if (user && password) {
+  if (user && password) {
       localStorage.setItem('username', user);
       return true;
     }

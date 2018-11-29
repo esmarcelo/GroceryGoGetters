@@ -1,42 +1,43 @@
-
 <div class="alert alert-info" roler="alert" *ngIf="message">
-  {{ message }}
-</div>
-<br><br>
-<div class="container">
-  <form class="form-group mx-auto" *ngIf="!authService.getUser()">
-    <div class="form-group">
-      <label for="username">User: </label>
-      <div class="input-group">
-        <i class="fas fa-user-alt"></i>
-        <input type="text" class="form-control" name="username" required #username><!-- ask about #username -->
-      </div>
-    </div>
-    <div class="form-group">
-      <label for="password">Password: </label>
-      <div class="input-group">
-        <i class="fas fa-lock"></i>
-        <input class="form-control" type="password" name="password" #password required>
-      </div>
-    </div>
-    <a class="btn signup-btn" href="home">
-      Sign Up
-    </a>
-    <button class="btn login-btn" type="submit" (click)="login(username.value, password.value)">
-      Login
-    </button>
-  </form>
-</div>
-
-  <div class="well" *ngIf="authService.getUser()">
-    <div class="container">
-      <br>
-      Logged in as <b>{{ authService.getUser() }}</b>
-      <a href (click)="logout()"> Log out </a>
-      <br>
-      <br>
-      <img width="1080" height="608" src="../../assets/architecture-buildings-business-331990.jpg"/>
-    </div>
+    {{ message }}
   </div>
+  <br><br>
+  <div class="container">
+    <form class="form-group mx-auto" *ngIf="!authService.getUser()">
+      <div class="form-group">
+        <label for="username">User: </label>
+        <div class="input-group">
+          <i class="fas fa-user-alt"></i>
+          <input type="text" class="form-control" name="username" required #username><!-- ask about #username -->
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="password">Password: </label>
+        <div class="input-group">
+          <i class="fas fa-lock"></i>
+          <input class="form-control" type="password" name="password" #password required>
+        </div>
+      </div>
+      <a class="btn signup-btn" href="home">
+        Sign Up
+      </a>
+      <button class="btn login-btn" type="submit" (click)="login(username.value, password.value)">
+        Login
+      </button>
+    </form>
+  </div>
+  
+    <div class="well" *ngIf="authService.getUser()">
+      <div class="container">
+        <br>
+        Logged in as <b>{{ authService.getUser() }}</b>
+        <a href (click)="logout()"> Log out </a>
+        <br>
+        <br>
+        <img width="1080" height="608" src="../../assets/architecture-buildings-business-331990.jpg"/>
+      </div>
+    </div>
+
+  
     
   
