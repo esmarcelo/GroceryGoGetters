@@ -19,6 +19,24 @@ export class AuthService  implements OnInit {
 
   logout(): any {
     localStorage.removeItem('username');
+    localStorage.removeItem('id');
+    localStorage.removeItem('role');
+  }
+
+  setUserId(id) {
+    localStorage.setItem('id', id);
+  }
+
+  getId() {
+    return localStorage.getItem('id');
+  }
+
+  setRole(role) {
+    localStorage.setItem('role', role );
+  }
+
+  getRole() {
+    return localStorage.getItem('role');
   }
 
   getUser(): any {
