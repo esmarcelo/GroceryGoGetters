@@ -1,7 +1,22 @@
-
-<div class="container">
-    <p>
-        orders works!
-      </p>
-      
+<br>
+<div class="container" >
+    <div class="card text-center"><h2>Orders</h2></div>
+    <table class="table">
+        <thead class="thead-light">
+        <th scope="col">Order</th>
+        <th scope="col">Date</th>
+        <th scope="col">Amount</th>
+        </thead>
+        <div *ngIf="authService.isLoggedIn()">
+        <div *ngFor="let order of orders">
+            <tbody>
+                <tr scope="row"> 
+                    <td>{{order.order_id}}</td>
+                    <td>{{ order.order_submitted }}</td>
+                    <td>${{ order.order_amount }}</td>
+                </tr>
+            </tbody>
+        </div>
+        </div>
+    </table>
 </div>

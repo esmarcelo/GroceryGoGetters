@@ -26,6 +26,8 @@ export class LoginComponent implements OnInit {
         console.log(this.users[0].user_username);
         if (username === this.users[i].user_username && password === this.users[i].user_password) {
             this.authService.login(username, password);
+            this.authService.setUserId(this.users[i].user_id);
+            this.authService.setRole(this.users[i].role_id.role_id);
         }
       }
     }
