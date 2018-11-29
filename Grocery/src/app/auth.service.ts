@@ -9,6 +9,7 @@ export class AuthService  implements OnInit {
 
   constructor(private http: HttpClient) { }
 
+  // Logging
   login(user: string, password: string): boolean {
   if (user && password) {
       localStorage.setItem('username', user);
@@ -23,6 +24,7 @@ export class AuthService  implements OnInit {
     localStorage.removeItem('role');
   }
 
+  // User Identifiers
   setUserId(id) {
     localStorage.setItem('id', id);
   }
@@ -43,8 +45,17 @@ export class AuthService  implements OnInit {
     return localStorage.getItem('username');
   }
 
+  // Is someone logged in
   isLoggedIn(): boolean {
     return this.getUser() !== null;
+  }
+
+  isCustomer(): boolean {
+    if (localStorage.getItem('role') === '2') {
+      return true;
+    }
+    return false;
+
   }
 
   ngOnInit(): void {

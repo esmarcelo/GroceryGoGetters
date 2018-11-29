@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-schedule',
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class ScheduleComponent implements OnInit {
 
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   scheduleDelivery(del: string, freq: string, first: string, last: string,
     add: string, add2: string, ct: string, state: string, zip: number) {
