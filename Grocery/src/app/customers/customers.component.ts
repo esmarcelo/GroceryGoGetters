@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-customers',
@@ -7,7 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CustomersComponent implements OnInit {
 
-  constructor() { }
+  constructor(private authService: AuthService) { }
+
+  // call auth service to verify customer status
+  isCustomer(): boolean {
+    return this.authService.isCustomer();
+  }
 
   ngOnInit() {
   }
