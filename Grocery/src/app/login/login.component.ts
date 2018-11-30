@@ -28,6 +28,12 @@ export class LoginComponent implements OnInit {
             this.authService.login(username, password);
             this.authService.setUserId(this.users[i].user_id);
             this.authService.setRole(this.users[i].role_id.role_id);
+            this.authService.setFirstname(this.users[i].user_fname);
+            this.authService.setLastname(this.users[i].user_lname);
+            this.authService.setEmail(this.users[i].user_email);
+            this.authService.setAddres(this.users[i].user_address);
+            this.authService.setCity(this.users[i].user_city);
+            this.authService.setZipcode(this.users[i].user_zipcode);
         }
       }
     }

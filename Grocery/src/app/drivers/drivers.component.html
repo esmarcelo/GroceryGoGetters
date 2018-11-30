@@ -1,3 +1,6 @@
+<br>
+<br>
+<div class="container" *ngIf = isDriver()>
 <div class="card-deck">
 
 <div class="card" [routerLink]="['/profile']">
@@ -11,7 +14,7 @@
   </div>
 </div>
 
-<div class="card" [routerLink]="['/completedDriverOrders']">
+<div class="card" [routerLink]="['/deliveredDriverOrders']">
   <img class="card-img-top" src="../../assets/number-list-line.svg" alt="Card image cap">
   <div class="card-body">
     <h5 class="card-title">View Completed orders</h5>
@@ -34,5 +37,47 @@
 </div>
 
 </div>
+
+</div>
 <br>
 <br>
+
+<div class="container" *ngIf = !isDriver()>
+    <div class="card-deck">
+    
+    <div class="card">
+        <img class="card-img-top" src="../../assets/user-line.svg" alt="Card image cap">
+      <div class="card-body" >
+        <h5 class="card-title">Profile</h5>
+        <p class="card-text">In this section you can update your profile.</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Last updated 3 mins ago</small>
+      </div>
+    </div>
+    
+    <div class="card" >
+      <img class="card-img-top" src="../../assets/number-list-line.svg" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">View Completed orders</h5>
+        <p class="card-text">These are the orders you completed.</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Last updated 3 mins ago</small>
+      </div>
+    </div>
+    
+    <div class="card" >
+      <img class="card-img-top" src="../../assets/number-list-line.svg" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">View Upcoming orders</h5>
+        <p class="card-text">Upcoming orders to do.</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Last updated 3 mins ago</small>
+      </div>
+    </div>
+    
+    </div>
+    
+    </div>

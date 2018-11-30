@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { last } from '@angular/router/src/utils/collection';
 
 @Injectable({
   providedIn: 'root'
@@ -37,6 +38,55 @@ export class AuthService  implements OnInit {
     localStorage.setItem('role', role );
   }
 
+  setFirstname(firstname){
+    localStorage.setItem('firstname',firstname)
+  }
+
+  setLastname(lastname){
+    localStorage.setItem('lastname', lastname)
+  }
+
+  setEmail(email){
+    localStorage.setItem('email',email)
+  }
+
+  setAddres(address){
+    localStorage.setItem('address',address)
+  }
+
+  setCity(city){
+    localStorage.setItem('city',city)
+  }
+
+  setZipcode(zipcode){
+    localStorage.setItem('zipcode',zipcode)
+  }
+
+  getFirstname(){
+    return localStorage.getItem('firstname');
+  }
+
+  getLastname(){
+    return localStorage.getItem('lastname');
+  }
+
+  getEmail(){
+    return localStorage.getItem('email');
+  }
+
+  getAddres(){
+    return localStorage.getItem('address');
+  }
+
+  getCity(){
+   return localStorage.getItem('city');
+  }
+
+  getZipcode(){
+   return localStorage.getItem('zipcode');
+  }
+
+
   getRole() {
     return localStorage.getItem('role');
   }
@@ -52,6 +102,14 @@ export class AuthService  implements OnInit {
 
   isCustomer(): boolean {
     if (localStorage.getItem('role') === '2') {
+      return true;
+    }
+    return false;
+
+  }
+
+  isDriver(): boolean {
+    if (localStorage.getItem('role') === '3') {
       return true;
     }
     return false;

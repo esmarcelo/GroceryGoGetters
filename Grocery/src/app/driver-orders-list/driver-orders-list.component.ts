@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-driver-orders-list',
@@ -6,10 +8,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./driver-orders-list.component.css']
 })
 export class DriverOrdersListComponent implements OnInit {
+  dataOrders;
+  cartid;
 
-  constructor() { }
+  constructor(private http: HttpClient, private authservice: AuthService) { }  
 
-  ngOnInit() {
+  ngOnInit() { 
+    this.http.get('http://ec2-3-16-151-233.us-east-2.compute.amazonaws.com:8080/GroceryGoGetters/driverorders/'+ this.authservice.getId()).subscribe(dataOrders => {
+      console.log(dataOrders);
+      this.dataOrders = dataOrders;
+    });
+
+    
   }
 
 }

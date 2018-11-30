@@ -24,6 +24,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MapComponent } from './map/map.component';
 import { NguiMapModule } from '@ngui/map';
 import { DirectionsComponent } from './directions/directions.component';
+import { DriversDeliveredOrdersComponent } from './drivers-delivered-orders/drivers-delivered-orders.component';
 
 
 const routes: Routes = [
@@ -41,6 +42,7 @@ const routes: Routes = [
   { path: 'profile', component: ProfileComponent},
   { path: 'marketplace', component: MarketplaceComponent},
   { path: 'completedDriverOrders', component: DriverOrdersListComponent},
+  { path: 'deliveredDriverOrders', component: DriversDeliveredOrdersComponent},
   { path: 'map', component: MapComponent}
 ];
 
@@ -62,7 +64,8 @@ const routes: Routes = [
     MarketplaceComponent,
     DriverOrdersListComponent,
     MapComponent,
-    DirectionsComponent
+    DirectionsComponent,
+    DriversDeliveredOrdersComponent
   ],
   imports: [
     BrowserModule,
