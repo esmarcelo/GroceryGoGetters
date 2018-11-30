@@ -1,7 +1,7 @@
 
 
 <div class="container">
-    <h1 class="display-4">Upcoming Orders</h1>
+    <h1 class="display-4">Delivered Orders</h1>
 <table class="table table-hover">
     <thead class="thead-dark">
       <tr>
@@ -13,7 +13,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let dataorder of dataOrders">
+      <tr *ngFor="let dataorder of dataDeliveredOrders" >
         <th scope="row">{{dataorder.user_id.user_id}}</th>
         <td>{{dataorder.user_id.user_fname}}</td>
         <td>{{dataorder.user_id.user_lname}}</td>

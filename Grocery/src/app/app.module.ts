@@ -26,6 +26,8 @@ import { MapComponent } from './components/map/map.component';
 import { NguiMapModule } from '@ngui/map';
 import { DirectionsComponent } from './components/directions/directions.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
+import { DriversDeliveredOrdersComponent } from './components/drivers-delivered-orders/drivers-delivered-orders.component';
+
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -43,7 +45,8 @@ const routes: Routes = [
   { path: 'marketplace', component: MarketplaceComponent },
   { path: 'completedDriverOrders', component: DriverOrdersListComponent },
   { path: 'map', component: MapComponent },
-  { path: 'signup', component: SignUpComponent }
+  { path: 'signup', component: SignUpComponent },
+  { path: 'deliveredDriverOrders', component: DriversDeliveredOrdersComponent}
 ];
 
 @NgModule({
@@ -65,7 +68,8 @@ const routes: Routes = [
     DriverOrdersListComponent,
     MapComponent,
     DirectionsComponent,
-    SignUpComponent
+    SignUpComponent,
+    DriversDeliveredOrdersComponent
   ],
   imports: [
     BrowserModule,
