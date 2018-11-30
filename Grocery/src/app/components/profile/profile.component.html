@@ -1,0 +1,63 @@
+<br>
+<br>
+<div class="container">
+<form class="col-md-6 offset-md-3">
+  <div class="form-row">
+    <div class="form-group col-md-12">
+      <label for="inputFirstname">First Name</label>
+      <input type="text" class="form-control" id="inputFirstname" name="firstname" #newFirstname />
+    </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-12">
+        <label for="inputLastname">Last Name</label>
+        <input type="text" class="form-control" id="inputLastname" name="lastname" #newLastname />
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-12">
+        <label for="inputAddress">Email</label>
+        <input type="email" class="form-control" id="inputEmail" name="email" #newEmail />
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-12">
+        <label for="inputFirstname">Username</label>
+        <input type="text" class="form-control" id="inputUsername" name="username" #newUsername />
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-4">
+        <label for="inputState">Address</label>
+        <input type="text" class="form-control" id="inputAddress" name="address" #newAddress />
+      </div>
+      <div class="form-group col-md-4">
+        <label for="inputPhone">City</label>
+        <input type="text" class="form-control" id="inputCity" name="city" #newCity />
+      </div>
+      <div class="form-group col-md-2">
+        <label for="inputPhone">State</label>
+        <input type="text" class="form-control" id="inputState" name="state" #newState />
+      </div>
+      <div class="form-group col-md-2">
+        <label for="inputZip">Zip</label>
+        <input type="text" class="form-control" id="inputZip" name="zipcode" #newZipcode />
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-12">
+      </div>
+    </div>
+  </form>
+  <div class="container">
+    <div class="container">
+      <div class="row">
+        <button class="btn col-md-5" [routerLink]="['/customers']"
+          (click)="editProfile(newFirstname.value, newLastname.value, newEmail.value,
+          newUsername.value, newAddress.value, newCity.value, newState.value, newZipcode.value)">
+          Update Profile
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,20 @@
+.signup-btn {
+  color: #626E60;
+  background-color: ghostwhite;
+  border-color: #626E60;
+  margin: 0 auto;
+  float: left;
+  /* height: 40px; */
+  /* width: 195px; */
+}
+.signup-btn:hover {
+  color: rgb(215, 255, 122);
+  background-color: #626E60;
+}
+#required {
+  color: red;
+}
+
+#complete {
+  color: green;
+}

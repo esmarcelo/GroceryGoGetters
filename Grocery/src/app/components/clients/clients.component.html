@@ -1,0 +1,22 @@
+<div class="container">
+  <span>Add products to the Database</span>
+  <form>
+    <div class="form-row">
+      <div class="form-group col-md-12">
+        <label for="inputLastname">Product Barcode Number: </label>
+        <input type="text" class="form-control" id="inputBarcode" name="barcode" placeholder="Enter barcode" #Barcode required />
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-12">
+        <button class="btn signup-btn col-md-12" type="submit"
+          (click)="grabProduct(Barcode)">
+          Get Product
+        </button>
+      </div>
+    </div>  
+  </form>
+</div>
+<div>
+  <p> {{ data | json }}</p>
+</div>

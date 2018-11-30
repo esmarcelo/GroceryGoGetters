@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="row">
+    <div *ngFor="let data of datas" class="col-sm-3">
+      <div class="card">
+        <img src="{{ data.product_descr }}">
+        <p><b>{{ data.product_name }}</b></p>
+        <p class="price">${{ data.product_price }}</p>
+        <p><button>Add to Cart</button></p>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,65 @@
+<br><br>
+<div class="container">
+  <form class="col-md-6 offset-md-3">
+    <span id="required" *ngIf="show" ><strong>*Please fill out all the fields</strong></span>
+    <div class="form-row">
+      <div class="form-group col-md-12">
+        <label for="inputFirstname">First Name</label>
+        <input type="text" class="form-control" id="inputFirstname" name="firstname" required #Firstname />
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-12">
+        <label for="inputLastname">Last Name</label>
+        <input type="text" class="form-control" id="inputLastname" name="lastname" #Lastname required />
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-12">
+        <label for="inputAddress">Email</label>
+        <input type="email" class="form-control" id="inputEmail" name="email" #Email required />
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-12">
+        <label for="inputFirstname">Username</label>
+        <input type="text" class="form-control" id="inputUsername" name="username" #Username required />
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-12">
+        <label for="inputLastname">Password</label>
+        <input type="password" class="form-control" id="inputPassword" name="password" #Password required />
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-4">
+        <label for="inputState">Address</label>
+        <input type="text" class="form-control" id="inputAddress" name="address" #Address required />
+      </div>
+      <div class="form-group col-md-4">
+        <label for="inputPhone">City</label>
+        <input type="text" class="form-control" id="inputCity" name="city" #City required />
+      </div>
+      <div class="form-group col-md-2">
+        <label for="inputPhone">State</label>
+        <input type="text" class="form-control" id="inputState" name="state" #State required />
+      </div>
+      <div class="form-group col-md-2">
+        <label for="inputZip">Zip</label>
+        <input type="text" class="form-control" id="inputZip" name="zipcode" #Zipcode required />
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-12">
+        <button class="btn signup-btn col-md-12" type="submit"
+          (click)="createCustomer(Firstname.value, Lastname.value, Email.value, Username.value,
+          Password.value, Address.value, City.value, Zipcode.value)">
+          Create Account
+        </button>
+        <span id="complete" *ngIf="showLogin"><strong>*Please login to your account</strong></span>
+      </div>
+    </div>   
+  </form>
+</div>
+
