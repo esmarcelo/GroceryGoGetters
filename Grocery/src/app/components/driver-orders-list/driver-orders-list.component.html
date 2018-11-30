@@ -12,7 +12,7 @@
               
             </select>
           </div>
-          <div class="col-auto my-1">
+          <div class="col-auto my-1" *ngFor="let dataorder of dataOrders">
             <button (click)="submitorder(dataorder.order_id)" class="btn btn-primary">Submit</button>
           </div>
         </div>

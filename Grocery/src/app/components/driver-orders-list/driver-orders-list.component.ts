@@ -16,8 +16,11 @@ export class DriverOrdersListComponent implements OnInit {
 
   submitorder(ordernumber: any){
 
-    console.log(ordernumber);
-  };
+    this.http.get('http://ec2-3-16-151-233.us-east-2.compute.amazonaws.com:8080/GroceryGoGetters/setOrdersDelivered/'+ ordernumber).subscribe(approveOrder => {
+    console.log(ordernumber)
+
+  });
+}
 
   ngOnInit() { 
     this.http.get('http://ec2-3-16-151-233.us-east-2.compute.amazonaws.com:8080/GroceryGoGetters/driverorders/'+ this.authservice.getId()).subscribe(dataOrders => {
