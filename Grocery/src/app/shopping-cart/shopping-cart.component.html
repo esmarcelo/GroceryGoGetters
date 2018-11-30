@@ -3,7 +3,7 @@
   <div class="card text-center bg-light"><h2>Carts</h2></div>
   <div  *ngIf="authService.isLoggedIn()">
       <ul class="list-group" *ngFor="let cart of carts">
-        <li class="list-group-item"> {{ cart.cart_created_date }} {{ cart.cart_name }} {{cart.cart_items}} {{ cart.cart_status }} </li>
+        <li class="list-group-item">{{ cart.cart_id }} {{ cart.cart_created_date }} {{ cart.cart_name }} {{cart.cart_items}} {{ cart.cart_status }} </li>
       </ul>
   </div>
 </div>
