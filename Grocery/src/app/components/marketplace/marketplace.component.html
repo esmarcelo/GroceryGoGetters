@@ -5,7 +5,7 @@
         <img src="{{ data.product_descr }}">
         <p><b>{{ data.product_name }}</b></p>
         <p class="price">${{ data.product_price }}</p>
-        <p><button>Add to Cart</button></p>
+        <p><button (click)="addItem(data.product_id)">Add to Cart</button></p>
       </div>
     </div>
   </div>
